@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AC0AA1452D2D44170095C377 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AA1432D2D44170095C377 /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		AC0AA1312D2D40800095C377 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,12 +24,13 @@
 
 /* Begin PBXFileReference section */
 		AC0AA1332D2D40800095C377 /* Data-Structures-and-Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data-Structures-and-Algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0AA1432D2D44170095C377 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AC0AA1352D2D40800095C377 /* Data-Structures-and-Algorithms */ = {
+		AC0AA1472D2D44270095C377 /* Array */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Data-Structures-and-Algorithms";
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,8 +49,9 @@
 		AC0AA12A2D2D40800095C377 = {
 			isa = PBXGroup;
 			children = (
-				AC0AA1352D2D40800095C377 /* Data-Structures-and-Algorithms */,
+				AC0AA1472D2D44270095C377 /* Array */,
 				AC0AA1342D2D40800095C377 /* Products */,
+				AC0AA1432D2D44170095C377 /* main.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +79,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AC0AA1352D2D40800095C377 /* Data-Structures-and-Algorithms */,
+				AC0AA1472D2D44270095C377 /* Array */,
 			);
 			name = "Data-Structures-and-Algorithms";
 			packageProductDependencies = (
@@ -121,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0AA1452D2D44170095C377 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
