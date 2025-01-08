@@ -10,19 +10,22 @@ struct ArrayExamples {
         // Задача заключается в нахождении самой длинной последовательности единиц в бинарном массиве.
         // Нужно отслеживать длину текущей последовательности единиц
         // и обновлять максимальную длину, когда последовательность прерывается
+        
         func findMaxConsecutiveOnes(nums: [Int]) -> Int {
-            // 1. отслеживаем максимальное количество последовательных единиц, которое нашли до текущего момента
-            var maxConsecutiveOnes = 0
-            // 2. отслеживаем текущую последовательность единиц
+            // 1. отслеживаем текущую последовательность единиц
             var consecutiveOnes = 0
+            // 2. отслеживаем максимальное количество последовательных единиц, которое нашли до текущего момента
+            var maxConsecutiveOnes = 0
             
             for num in nums {
-                // 3. Если элемент равен 1 то обновляем значение currentCount
+                // 3. Если элемент равен 1 инкрементим consecutiveOnes
                 if num == 1 {
                     consecutiveOnes += 1
                 } else {
                     // 4. Если элемент не равен 1 (то есть 0 в нашем бинарном массиве), то
                     // берем максимальное число от 2х наших счетчиков
+                    // т.к нам нужны корректне значения, ведь пока мы не встретим 0 maxConsecutiveOnes будет 0,
+                    // а consecutiveOnes в случае когда встречается 0 сбрасывается
                     maxConsecutiveOnes = max(maxConsecutiveOnes, consecutiveOnes)
                     // и сбрасываем consecutiveOnes
                     consecutiveOnes = 0
@@ -39,7 +42,7 @@ struct ArrayExamples {
             return max(maxConsecutiveOnes, consecutiveOnes)
         }
         
-        let result = findMaxConsecutiveOnes(nums: [1,1,1,1,0,0,1,1,1,1,1])
+        let result = findMaxConsecutiveOnes(nums: [1,1,1,1,0,0,1,1,1,1,1,0,0])
         print(result)
     }
     
